@@ -46,7 +46,7 @@ const handleLogin = async (e: React.FormEvent) => {
           <div className="mx-auto w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
             <LogIn className="h-6 w-6 text-white" />
           </div>
-          <CardTitle className="text-2xl font-bold">Hoş Geldiniz</CardTitle>
+          <CardTitle className="text-2xl font-bold">Hoş Geldiniz.</CardTitle>
           <CardDescription className="text-gray-600">Hesabınıza giriş yapın ve devam edin</CardDescription>
         </CardHeader>
 
