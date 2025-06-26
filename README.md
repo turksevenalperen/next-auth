@@ -103,14 +103,14 @@ npm run test
 - XSS koruması
 
 ##  Ekran Görüntüleri
-![image](https://github.com/user-attachments/assets/d6daf44a-1de8-4eb0-919a-3513ff60d684)
-![image](https://github.com/user-attachments/assets/51ac5517-e55c-41ee-a991-27d71b02a34b)
-![image](https://github.com/user-attachments/assets/df37877c-f952-4c83-bc67-6173dcf88d48)
-![image](https://github.com/user-attachments/assets/49d11cd1-4f63-497e-bcfb-3baf5dc91b99)
-![image](https://github.com/user-attachments/assets/05d98a01-ce75-4654-a9df-34e10177c849)
-![image](https://github.com/user-attachments/assets/d50d12b3-ed3e-458b-af7e-1f731775368c)
-![image](https://github.com/user-attachments/assets/e63068d4-3055-400d-a64b-6facfeb67e3f)
-![image](https://github.com/user-attachments/assets/54eb02d0-f4e0-40ee-823a-59a3ad639f11)
+[image](https://github.com/user-attachments/assets/d6daf44a-1de8-4eb0-919a-3513ff60d684)
+[image](https://github.com/user-attachments/assets/51ac5517-e55c-41ee-a991-27d71b02a34b)
+[image](https://github.com/user-attachments/assets/df37877c-f952-4c83-bc67-6173dcf88d48)
+[image](https://github.com/user-attachments/assets/49d11cd1-4f63-497e-bcfb-3baf5dc91b99)
+[image](https://github.com/user-attachments/assets/05d98a01-ce75-4654-a9df-34e10177c849)
+[image](https://github.com/user-attachments/assets/d50d12b3-ed3e-458b-af7e-1f731775368c)
+[image](https://github.com/user-attachments/assets/e63068d4-3055-400d-a64b-6facfeb67e3f)
+[image](https://github.com/user-attachments/assets/54eb02d0-f4e0-40ee-823a-59a3ad639f11)
 
 
 
