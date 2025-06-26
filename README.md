@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Next.js 14 + Auth0 + NextAuth.js Kimlik Doğrulama Projesi
+Canlı Demo: https://next-auth-seven-lovat.vercel.app
 
-## Getting Started
+Admin Giriş Bilgileri:
+E-posta: admin@gmail.com
+Şifre: Admin123,
 
-First, run the development server:
+Projenin Amacı
+Bu proje, modern bir web uygulamasında kullanıcıların güvenli bir şekilde kayıt olması, giriş yapması, rollerine göre yönlendirilmesi ve erişim kontrollerinin sağlanması için geliştirilmiştir. Next.js 14 App Router mimarisi kullanılarak, hem klasik kullanıcı adı/şifre girişi hem de OAuth sağlayıcıları ile (örneğin Google, GitHub) kimlik doğrulama yapılabilir. JWT tabanlı oturum yönetimi, şifre sıfırlama, rol bazlı yönlendirme ve sayfa koruma gibi birçok güvenlik özelliği entegre edilmiştir.
 
-```bash
+Temel Özellikler
+Kayıt Ol (Signup): E-posta ve güçlü şifre ile kayıt. Şifre kuralları: büyük harf, küçük harf, sayı, özel karakter ve min. 8 karakter.
+
+Giriş (Login): Hem klasik hem de Auth0 OAuth sağlayıcıları ile giriş yapılabilir.
+
+Şifre Sıfırlama: E-posta üzerinden Auth0 API kullanılarak kullanıcıya şifre sıfırlama bağlantısı gönderilir.
+
+Rol Bazlı Yetkilendirme: Kullanıcı rolüne göre /admin veya /dashboard sayfalarına yönlendirme.
+
+Sayfa Koruma (Middleware): Oturumu olmayan kullanıcılar login sayfasına yönlendirilir. Rolü uymayan kullanıcılar /unauthorized sayfasına yönlendirilir.
+
+JWT Tabanlı Oturum Yönetimi: Stateless, güvenli oturum kontrolü.
+
+Form Validasyonu ve Bildirimler: Formlarda anlık geri bildirimler ve başarılı/hatalı işlemlerde kullanıcıya bilgi verilir.
+
+Proje Mimarisi ve Yapısı
+Next.js 14 App Router: Yeni dosya sistemi kullanılarak sayfalar ve API route’ları yapılandırıldı.
+
+NextAuth.js + Auth0: Hem sosyal girişler hem de e-posta/şifre yöntemi ile kimlik doğrulama sağlandı.
+
+Custom Hooks: useSignup, usePasswordValidation gibi özel hook’lar ile form validasyonu ve iş mantığı ayrıştırıldı.
+
+Middleware: Sunucu tarafında oturum ve rol kontrolü ile yönlendirme.
+
+TailwindCSS: Modern, responsive ve erişilebilir arayüz tasarımı.
+
+SOLID Prensipleri: Kodun sürdürülebilirliği için işlevler ayrıştırıldı.
+
+12Factor Uyumlu: Çevresel değişkenler .env dosyasında yönetildi, yapılandırma dışa aktarıldı.
+
+Kurulum Talimatları
+Bu projeyi klonlayın:
+
+
+git clone https://github.com/turksevenalperen/next-auth.git
+cd next-auth
+.env.example dosyasını .env olarak kopyalayın ve kendi Auth0 bilgilerinizle doldurun:
+
+
+
+AUTH0_CLIENT_ID=...
+AUTH0_CLIENT_SECRET=...
+AUTH0_DOMAIN=...
+AUTH0_ISSUER=...
+NEXTAUTH_SECRET=...
+NEXTAUTH_URL=http://localhost:3000
+Bağımlılıkları yükleyin:
+
+
+npm install
+Geliştirme ortamını başlatın:
+
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Tarayıcıdan erişin: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧪 Test ve Validasyon
+Giriş ve kayıt formlarında anlık hata kontrolü.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Middleware ile kullanıcıların rol bazlı erişim kontrolü.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Başarılı ve hatalı işlemlerde kullanıcıya anlamlı geri bildirimler.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📁 Proje Dizin Yapısı
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+src/
+├── app/
+│   ├── (auth)/              → Giriş, kayıt, şifre sıfırlama sayfaları
+│   ├── admin/               → Admin paneli
+│   ├── dashboard/           → Kullanıcı paneli
+│   ├── api/                 → API route’ları (signup, reset-password, nextauth)
+│   ├── unauthorized/        → Yetkisiz erişim sayfası
+├── components/              → UI bileşenleri (LoginForm, Dashboard, AdminPanel, vb.)
+├── hooks/                   → Custom React hook’lar
+├── lib/                     → Auth konfigürasyonu ve yardımcı servisler
+├── middleware.ts            → Sayfa erişim kontrol middleware’i
+🧠 Ek Kaynaklar
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
