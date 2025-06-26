@@ -6,7 +6,7 @@ E-posta: admin@gmail.com
 Şifre: Admin123,
 
 Projenin Amacı
-Bu proje, modern bir web uygulamasında kullanıcıların güvenli bir şekilde kayıt olması, giriş yapması, rollerine göre yönlendirilmesi ve erişim kontrollerinin sağlanması için geliştirilmiştir. Next.js 14 App Router mimarisi kullanılarak, hem klasik kullanıcı adı/şifre girişi hem de OAuth sağlayıcıları ile (örneğin Google, GitHub) kimlik doğrulama yapılabilir. JWT tabanlı oturum yönetimi, şifre sıfırlama, rol bazlı yönlendirme ve sayfa koruma gibi birçok güvenlik özelliği entegre edilmiştir.
+Bu proje, modern bir web uygulamasında kullanıcıların güvenli bir şekilde kayıt olması, giriş yapması, rollerine göre yönlendirilmesi ve erişim kontrollerinin sağlanması için geliştirilmiştir. Next.js 14 App Router mimarisi kullanılarak, hem klasik kullanıcı adı/şifre girişi. JWT tabanlı oturum yönetimi, şifre sıfırlama, rol bazlı yönlendirme ve sayfa koruma gibi birçok güvenlik özelliği entegre edilmiştir.
 
 Temel Özellikler
 Kayıt Ol (Signup): E-posta ve güçlü şifre ile kayıt. Şifre kuralları: büyük harf, küçük harf, sayı, özel karakter ve min. 8 karakter.
@@ -26,7 +26,7 @@ Form Validasyonu ve Bildirimler: Formlarda anlık geri bildirimler ve başarıl�
 Proje Mimarisi ve Yapısı
 Next.js 14 App Router: Yeni dosya sistemi kullanılarak sayfalar ve API route’ları yapılandırıldı.
 
-NextAuth.js + Auth0: Hem sosyal girişler hem de e-posta/şifre yöntemi ile kimlik doğrulama sağlandı.
+NextAuth.js + Auth0:  E-posta/şifre yöntemi ile kimlik doğrulama sağlandı.
 
 Custom Hooks: useSignup, usePasswordValidation gibi özel hook’lar ile form validasyonu ve iş mantığı ayrıştırıldı.
 
@@ -72,19 +72,16 @@ Middleware ile kullanıcıların rol bazlı erişim kontrolü.
 Başarılı ve hatalı işlemlerde kullanıcıya anlamlı geri bildirimler.
 
 
+Ekran Görüntüleri 
+![image](https://github.com/user-attachments/assets/1bc3c627-04c7-4645-9f15-fd564ecce2c0)
+![image](https://github.com/user-attachments/assets/51fb5345-a457-4d1c-8563-fb23a6434ea4)
+![image](https://github.com/user-attachments/assets/676320cd-3d27-4dec-aad5-ee79600a0115)
 
-📁 Proje Dizin Yapısı
 
-src/
-├── app/
-│   ├── (auth)/              → Giriş, kayıt, şifre sıfırlama sayfaları
-│   ├── admin/               → Admin paneli
-│   ├── dashboard/           → Kullanıcı paneli
-│   ├── api/                 → API route’ları (signup, reset-password, nextauth)
-│   ├── unauthorized/        → Yetkisiz erişim sayfası
-├── components/              → UI bileşenleri (LoginForm, Dashboard, AdminPanel, vb.)
-├── hooks/                   → Custom React hook’lar
-├── lib/                     → Auth konfigürasyonu ve yardımcı servisler
-├── middleware.ts            → Sayfa erişim kontrol middleware’i
-🧠 Ek Kaynaklar
+
+
+
+
+
+
 
