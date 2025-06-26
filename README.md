@@ -76,7 +76,6 @@ Ekran Görüntüleri
 ![image](https://github.com/user-attachments/assets/1bc3c627-04c7-4645-9f15-fd564ecce2c0)
 ![image](https://github.com/user-attachments/assets/51fb5345-a457-4d1c-8563-fb23a6434ea4)
 ![image](https://github.com/user-attachments/assets/244b8549-4ab8-4dcd-9434-981b662a94f0)
-![image](https://github.com/user-attachments/assets/244b8549-4ab8-4dcd-9434-981b662a94f0)
 ![image](https://github.com/user-attachments/assets/676320cd-3d27-4dec-aad5-ee79600a0115)
 
 
