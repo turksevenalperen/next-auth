@@ -24,7 +24,7 @@ const handleLogin = async (e: React.FormEvent) => {
     email,
     password,
     redirect: false,
-    callbackUrl: "/dashboard", // Bunu dinamik yapacağız!
+    callbackUrl: "/dashboard", 
     connection: "Username-Password-Authentication",
   });
 
@@ -34,8 +34,7 @@ const handleLogin = async (e: React.FormEvent) => {
     setError("E-posta veya şifre hatalı. Lütfen tekrar deneyin.");
   }
   if (res?.ok) {
-    // Burada kullanıcı rolünü bilmiyoruz, o yüzden /dashboard'a yönlendiriyoruz.
-    // Ama middleware anında admini /admin'e atacak, dashboard hiç render edilmeyecek!
+
     window.location.href = res.url || "/dashboard";
   }
 };

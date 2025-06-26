@@ -1,4 +1,3 @@
-// src/app/signup/page.tsx
 "use client"
 import { useState } from "react"
 import type React from "react"
@@ -46,11 +45,9 @@ export default function SignupPage() {
   const [password, setPassword] = useState("")
   const router = useRouter()
 
-  // Custom hooks - Separation of Concerns
   const passwordValidation = usePasswordValidation(password)
   const { signup, isLoading, error, success } = useSignup()
 
-  // Form validation
   const isEmailValid = email.length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   const isFormValid = isEmailValid && passwordValidation.isValid
 

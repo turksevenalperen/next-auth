@@ -1,4 +1,3 @@
-// src/hooks/usePasswordValidation.ts
 import { useMemo } from "react";
 
 export interface PasswordValidation {

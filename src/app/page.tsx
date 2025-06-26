@@ -1,4 +1,3 @@
-// src/app/page.tsx (veya /src/app/(auth)/page.tsx gibi olabilir)
 import { authConfig } from "@/lib/auth.config";
 import { getServerSession } from "next-auth/next";
 import { redirect } from "next/navigation";

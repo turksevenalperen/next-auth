@@ -1,4 +1,3 @@
-//src/app/unauthorized/page.tsx
 export default function UnauthorizedPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-red-50 px-4">
